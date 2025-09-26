@@ -34,6 +34,10 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
+    
+    <!-- Preload critical hero image for faster loading -->
+    <link rel="preload" as="image" href="assets/img/hero-img.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/img/hero-img.png" fetchpriority="high">
 
     <!-- =======================================================
     * Template Name: FlexStart
@@ -84,7 +88,10 @@
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-                    <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+                    <picture>
+                        <source srcset="assets/img/hero-img.webp" type="image/webp">
+                        <img src="assets/img/hero-img.png" class="img-fluid animated" alt="Digital Strategy for Medical Professionals" loading="eager" fetchpriority="high" width="600" height="400">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -106,7 +113,10 @@
                 </div>
 
                 <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-                    <img src="assets/img/about.jpg" class="img-fluid" alt="">
+                    <picture>
+                        <source srcset="assets/img/about.webp" type="image/webp">
+                        <img src="assets/img/about.png" class="img-fluid" alt="About MediaDoc - Digital Strategy by Doctors" loading="lazy" width="600" height="400">
+                    </picture>
                 </div>
 
             </div>
